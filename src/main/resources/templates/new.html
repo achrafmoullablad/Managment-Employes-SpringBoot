@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Home</title>
+	<link rel="stylesheet"  th:href="@{/css/bootstrap.min.css}">
+	 <link rel="stylesheet"  th:href="@{/css/all.min.css}">
+</head>
+<body class="bg-info">
+	<div class="container">
+		<div class="row justify-content-center">
+			<form action="#" th:action="@{/save}" th:object="${employe}" method="post">
+				<h1 class="text-center text-light p-2 m-2">FORM ADD EMPLOYE</h1>
+	       		<div class="mb-3">
+				    <label for="exampleInputEmail1" class="form-label">Name Employe</label>
+				    <input type="text" class="form-control" id="exampleInputEmail1" th:field="*{name}" placeholder="Entrer Name of Employe">
+	       		</div>
+	       		<div class="mb-3">
+				    <label for="exampleInputEmail1" class="form-label">Adresse Employe</label>
+				    <input type="text" class="form-control" id="exampleInputEmail1" th:field="*{adresse}" placeholder="Entrer Adresse of Employe">
+	       		</div>
+	       		<div class="mb-3">
+				    <label for="exampleInputEmail1" class="form-label">Telephone Employe</label>
+				    <input type="text" class="form-control" id="exampleInputEmail1" th:field="*{telephone}" placeholder="Entrer Telephone of Employe">
+	       		</div>
+	       		<button type="submit" class="btn btn-primary">Submit</button>
+	       	</form>
+		</div>
+	</div>
+	<script th:src="@{/js/bootstrap.bundle.min.js}"></script>
+	<script th:src="@{/js/jquery-3.6.0.min.js}"></script>
+</body>
+</html>
